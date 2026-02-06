@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Bhavana ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #fde2e4, #fadadd);
+  overflow-x: hidden;
+  color: #4a2c2a;
+  text-align: center;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: rgba(255, 105, 135, 0.6);
+  font-size: 20px;
+  animation: floatUp 8s linear infinite;
+}
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 25px;
+}
+
+/* Glowing name */
+.name {
+  font-size: 2.6em;
+  color: #d6336c;
+  text-shadow: 0 0 8px #ff8fab;
+  animation: glow 2.5s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 8px #ff8fab; }
+  to { text-shadow: 0 0 16px #ff477e; }
+}
+
+.soft {
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 22px;
+  margin: 18px 0;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+}
+
+.card {
+  background: rgba(255,255,255,0.6);
+  border-radius: 26px;
+  padding: 22px;
+  margin-top: 25px;
+}
+
+button {
+  background: #ff6f91;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 26px;
+  font-size: 1em;
+  color: white;
+  margin: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff4f75;
+}
+
+.hidden {
+  display: none;
+  margin-top: 18px;
+  font-size: 1.15em;
+}
+
+.forever {
+  background: #c9184a;
+  font-size: 1.25em;
+  padding: 15px 38px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hearts -->
+<script>
+for(let i=0;i<20;i++){
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDelay=Math.random()*5+"s";
+  document.body.appendChild(h);
+}
+</script>
+
+<div class="container">
+
+  <div class="name">Bhavana</div>
+
+  <p class="soft">
+    I don’t know when it happened…  
+    but somewhere between your smile  
+    and the way you exist so effortlessly,  
+    you became my favorite thought.
+  </p>
+
+  <img src="photo1.jpg" class="photo">
+  <img src="photo2.jpg" class="photo">
+
+  <div class="card">
+    <p><b>This song feels like you 🎶</b></p>
+    <iframe width="100%" height="200"
+      src="https://www.youtube.com/embed/7z2KxYk0ZAE"
+      frameborder="0" allowfullscreen>
+    </iframe>
+    <p class="soft"><i>Konchem Konchem – Eega</i></p>
+  </div>
+
+  <div class="card">
+    <p class="soft">
+      You have this quiet magic…  
+      the kind that doesn’t shout,  
+      but stays.
+      <br><br>
+      And every time I think of you,  
+      my heart forgets how to be calm.
+    </p>
+  </div>
+
+  <div class="card">
+    <p><b>Tell me honestly… 💭</b></p>
+    <p>What makes you smile the most?</p>
+
+    <button onclick="show('ans')">You being silly 😄</button>
+    <button onclick="show('ans')">Us, without trying 💕</button>
+    <button onclick="show('ans')">Moments that feel safe 🫶</button>
+
+    <div id="ans" class="hidden">
+      Whatever you chose…  
+      I hope I get to be part of it.
+    </div>
+  </div>
+
+  <div class="card">
+    <p><b>One more thing…</b></p>
+    <button onclick="show('yes')">Yes 💖</button>
+    <button onclick="show('shy')">I’m shy 🙈</button>
+
+    <div id="yes" class="hidden">
+      That smile you’re making right now?  
+      I wish I could see it.
+    </div>
+
+    <div id="shy" class="hidden">
+      That’s okay…  
+      shy hearts are my favorite.
+    </div>
+  </div>
+
+  <button class="forever" onclick="show('forever')">
+    Will you be mine… forever? 💍
+  </button>
+
+  <div id="forever" class="hidden">
+    <p class="soft">
+      I don’t promise perfection.  
+      But I promise effort.  
+      Presence.  
+      And a heart that chooses you —
+      every single day.
+      <br><br>
+      If forever has a beginning,  
+      I hope it starts here…  
+      with you. ❤️
+    </p>
+  </div>
+
+</div>
+
+<script>
+function show(id){
+  document.getElementById(id).style.display="block";
+}
+</script>
+
+</body>
+</html>
